@@ -1,0 +1,108 @@
+Linux terminal (GitBash) commands
+
+1) Посмотреть где я
+
+MacBook-Air-Olga:QA Vadim olgakisel$ pwd
+
+2) Создать папку
+
+MacBook-Air-Olga:QA Vadim olgakisel$ mkdir q1
+
+3) Зайти в папку
+
+MacBook-Air-Olga:QA Vadim olgakisel$ cd q1
+MacBook-Air-Olga:q1 olgakisel$ 
+
+4) Создать 3 папки
+
+MacBook-Air-Olga:q1 olgakisel$ mkdir a1 a2 a3
+
+5) Зайти в любую папку
+
+MacBook-Air-Olga:q1 olgakisel$ cd a2
+MacBook-Air-Olga:a2 olgakisel$ 
+
+6) Создать 5 файлов (3 txt, 2 json)
+
+MacBook-Air-Olga:a2 olgakisel$ touch c1.txt c2.txt c3.txt
+MacBook-Air-Olga:a2 olgakisel$ cat > f1.json
+MacBook-Air-Olga:a2 olgakisel$ cat > f2.json
+
+7) Создать 3 папки
+
+MacBook-Air-Olga:a2 olgakisel$ mkdir 1 2 3
+
+8) Вывести список содержимого папки
+
+MacBook-Air-Olga:a2 olgakisel$ ls -la
+total 8
+drwxr-xr-x  10 olgakisel  staff  320 Jun 13 11:21 .
+drwxr-xr-x   6 olgakisel  staff  192 Jun 13 11:17 ..
+drwxr-xr-x   2 olgakisel  staff   64 Jun 13 11:20 1
+drwxr-xr-x   2 olgakisel  staff   64 Jun 13 11:20 2
+drwxr-xr-x   2 olgakisel  staff   64 Jun 13 11:21 3
+-rw-r--r--   1 olgakisel  staff    0 Jun 13 11:17 c1.txt
+-rw-r--r--   1 olgakisel  staff    0 Jun 13 11:17 c2.txt
+-rw-r--r--   1 olgakisel  staff    0 Jun 13 11:17 c3.txt
+-rw-r--r--   1 olgakisel  staff    0 Jun 13 11:18 f1.json
+-rw-r--r--   1 olgakisel  staff    8 Jun 13 11:19 f2.json
+MacBook-Air-Olga:a2 olgakisel$ 
+
+9) + Открыть любой txt файл
+
+MacBook-Air-Olga:a2 olgakisel$ vim c1.txt
+
+10) + написать туда что-нибудь, любой текст.
+
+кловиша I
+
+11) + сохранить и выйти
+
+последовательно клавиши esc : w q enter
+
+12) Выйти из папки на уровень выше
+
+MacBook-Air-Olga:a2 olgakisel$ cd ../
+MacBook-Air-Olga:q1 olgakisel$ 
+
+13) переместить любые 2 файла, которые вы создали, в любую другую папку.
+
+MacBook-Air-Olga:q1 olgakisel$ mv /Users/olgakisel/QA\ Vadim/q1/a2/c1.txt /Users/olgakisel/QA\ Vadim/q1/a3 
+MacBook-Air-Olga:3 olgakisel$ mv /Users/olgakisel/QA\ Vadim/q1/a2/c2.txt /Users/olgakisel/QA\ Vadim/q1/a3 
+
+14) скопировать любые 2 файла, которые вы создали, в любую другую папку.
+
+MacBook-Air-Olga:3 olgakisel$ cp /Users/olgakisel/QA\ Vadim/q1/a2/f1.json /Users/olgakisel/QA\ Vadim/q1/a2/2 
+MacBook-Air-Olga:3 olgakisel$ cp /Users/olgakisel/QA\ Vadim/q1/a2/f2.json /Users/olgakisel/QA\ Vadim/q1/a2/2 
+
+15) Найти файл по имени
+
+MacBook-Air-Olga:~ olgakisel$ find . -name "c1.txt"
+
+16) просмотреть содержимое в реальном времени (команда grep) изучите как она работает.
+
+MacBook-Air-Olga:a3 olgakisel$ tail -f c2.txt | grep 643
+643546
+643
+
+17) вывести несколько первых строк из текстового файла
+
+MacBook-Air-Olga:a3 olgakisel$ head -2 c1.txt
+hello
+how are you
+
+18) вывести несколько последних строк из текстового файла
+
+MacBook-Air-Olga:a3 olgakisel$ tail -3 c1.txt
+ok
+thanks
+
+19) просмотреть содержимое длинного файла (команда less) изучите как она работает.
+
+MacBook-Air-Olga:a3 olgakisel$ less c2.txt
+
+20) вывести дату и время
+
+MacBook-Air-Olga:a3 olgakisel$ date
+Tue Jun 14 11:18:47 +03 2022
+
