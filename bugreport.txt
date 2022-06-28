@@ -1,0 +1,13 @@
+ID
+Summary
+Description
+Actual Result
+Expected result
+Steps to reproduce
+Reproducibility
+Severity
+Priority
+Symptom (root cause)
+Workaround
+Comments
+Attachments
